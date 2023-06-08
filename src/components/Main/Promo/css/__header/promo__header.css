@@ -1,0 +1,6 @@
+.promo__header{
+  margin: 0 70px 100px 70px;
+  padding-top: 18px;
+  display: flex;
+  justify-content: space-between;
+}

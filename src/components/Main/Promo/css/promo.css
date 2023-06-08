@@ -1,0 +1,16 @@
+.promo{
+    background-color: #F3C1F8;
+    margin: 0 auto;
+    font-family: "Inter", "Arial", sans-serif;
+  }
+  
+  @media screen and (max-width: 1024px) {
+    .promo {
+      max-width: 680px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .promo {
+      max-width: 450px;
+    }
+  }
