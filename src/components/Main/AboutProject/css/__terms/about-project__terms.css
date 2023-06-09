@@ -1,0 +1,5 @@
+.about-project__terms{
+  display: grid;
+  grid-template-columns: 228px 912px;
+  margin-bottom: 110px;
+}

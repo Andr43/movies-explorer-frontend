@@ -1,6 +1,7 @@
 import projectLogo from "../../../images/project__logo.svg";
 import { Link } from "react-router-dom";
 import NavTab from "../NavTab/NavTab.js";
+import AboutProject from "../AboutProject/AboutProject.js";
 
 function Promo(props) {
   return (
@@ -32,6 +33,7 @@ function Promo(props) {
       </main>
     </div>
    <NavTab />
+   <AboutProject />
    </>
   );
 }
