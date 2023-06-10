@@ -1,0 +1,20 @@
+.about-me__source{
+  width: 36px;
+  height: 36px;
+}
+
+.about-me__source:first-child{
+  background: url("https://cdn-icons-png.flaticon.com/512/25/25231.png") no-repeat center center/ 36px 36px;
+}
+
+.about-me__source:nth-child(2){
+  background: url("https://cdn-icons-png.flaticon.com/512/732/732200.png") no-repeat center center/ 36px 36px;
+}
+
+.about-me__source:nth-child(3){
+  background: url("https://cdn-icons-png.flaticon.com/512/2111/2111646.png") no-repeat center center/ 36px 36px;
+}
+
+.about-me__source:last-child{
+  background: url("https://cdn-icons-png.flaticon.com/512/174/174855.png") no-repeat center center/ 36px 36px;
+}

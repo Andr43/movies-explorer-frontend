@@ -1,0 +1,9 @@
+.about-me__sub-header{
+  margin: 0;
+  padding: 0;
+  max-width: fit-content;
+  grid-column-start: 1;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 500;
+}

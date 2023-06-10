@@ -1,0 +1,4 @@
+.about-me__about{
+display: grid;
+grid-template-rows: 76px 46px auto;
+}

@@ -2,11 +2,13 @@ import projectLogo from "../../../images/project__logo.svg";
 import { Link } from "react-router-dom";
 import NavTab from "../NavTab/NavTab.js";
 import AboutProject from "../AboutProject/AboutProject.js";
+import Techs from "../Techs/Techs.js";
+import AboutMe from "../AboutMe/AboutMe.js";
 
 function Promo(props) {
   return (
     <>
-    <div className="promo">
+    <section className="promo">
       <header className="promo__header">
         <img
           src={projectLogo}
@@ -31,9 +33,11 @@ function Promo(props) {
           Учебный проект студента факультета Веб-разработки.
         </h1>
       </main>
-    </div>
+    </section>
    <NavTab />
    <AboutProject />
+   <Techs />
+   <AboutMe />
    </>
   );
 }

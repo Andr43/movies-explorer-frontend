@@ -1,0 +1,10 @@
+.techs__tech{
+  margin: 0;
+  padding: 21px 0;
+  min-width: 90px;
+  font-size: 14px;
+  line-height: 16.94px;
+  text-align: center;
+  background-color: #E8E8E8;
+  border-radius: 10px;
+}

@@ -1,0 +1,5 @@
+.about-me__sources{
+  align-items: end;
+  display: flex;
+  grid-gap: 20px;
+}
