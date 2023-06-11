@@ -1,0 +1,15 @@
+.footer__source{
+  grid-row-start: 1;
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  line-height: 15.73px;
+  font-weight: 400;
+  color: #000;
+  text-decoration: none;
+}
+
+.footer__source:nth-child(2){
+  text-align: right;
+  margin-right: 20px;
+}

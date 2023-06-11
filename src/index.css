@@ -35,3 +35,11 @@
 @import url("./components/Main/AboutMe/css/__source/about-me__source.css");
 @import url("./components/Main/AboutMe/css/__sources/about-me__sources.css");
 @import url("./components/Main/AboutMe/css/__sub-header/about-me__sub-header.css");
+@import url("./components/Main/Portfolio/css/portfolio.css");
+@import url("./components/Main/Portfolio/css/__list/portfolio__list.css");
+@import url("./components/Main/Portfolio/css/__name/portfolio__name.css");
+@import url("./components/Main/Portfolio/css/__source/portfolio__source.css");
+@import url("./components/Footer/css/footer.css");
+@import url("./components/Footer/css/__name/footer__name.css");
+@import url("./components/Footer/css/__source/footer__source.css");
+@import url("./components/Footer/css/__sources/footer__sources.css");
