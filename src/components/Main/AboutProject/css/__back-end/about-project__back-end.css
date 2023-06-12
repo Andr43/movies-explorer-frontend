@@ -8,3 +8,11 @@
   color: #a0a0a0;
   text-align: center;
 }
+
+@media screen and (min-width: 320px) and (max-width: 650px) {
+  .about-project__back-end {
+    margin-top: 11px;
+    font-size: 11px;
+    line-height: 12.74px;
+  }
+}

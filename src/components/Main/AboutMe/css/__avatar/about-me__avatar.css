@@ -8,3 +8,18 @@
   grid-row-end: 5;
   justify-self: end;
 }
+
+@media screen and (max-width: 768px) {
+  .about-me__avatar{
+    width: 255px;
+    height: 307px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 650px) {
+  .about-me__avatar{
+    width: 292px;
+    height: 352px;
+    grid-column-start: 1;
+    margin-bottom: 40px;
+  }
+}

@@ -1,6 +1,29 @@
-.portfolio{
-    max-width: 1140px;
-    margin: 0 auto;
-    margin-bottom: 204px;
-    font-family: "Inter", "Arial", sans-serif;
+.portfolio {
+  max-width: 1140px;
+  margin: 0 auto;
+  margin-bottom: 204px;
+  font-family: "Inter", "Arial", sans-serif;
+}
+
+@media screen and (max-width: 1200px) {
+  .portfolio {
+    max-width: 900px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .portfolio {
+    max-width: 770px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .portfolio {
+    max-width: 668px;
+    margin-bottom: 169px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 650px) {
+  .portfolio {
+    max-width: 292px;
+    margin-bottom: 149px;
+  }
 }

@@ -1,4 +1,4 @@
-.footer__source{
+.footer__source {
   grid-row-start: 1;
   margin: 0;
   padding: 0;
@@ -9,7 +9,16 @@
   text-decoration: none;
 }
 
-.footer__source:nth-child(2){
-  text-align: right;
-  margin-right: 20px;
+@media screen and (min-width: 320px) and (max-width: 650px) {
+  .footer__source {
+    font-size: 12px;
+    line-height: 14.52px;
+  }
+  .footer__source:nth-child(2) {
+    order: 1;
+    margin-bottom: 12px;
+  }
+  .footer__source:last-child {
+    margin-bottom: 30px;
+  }
 }

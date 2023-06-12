@@ -1,5 +1,23 @@
 .about-project__terms{
   display: grid;
-  grid-template-columns: 228px 912px;
+  grid-template-columns: 228px auto;
   margin-bottom: 110px;
+}
+
+@media screen and (max-width: 1024px) {
+  .about-project__terms {
+    grid-template-columns: 170px auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .about-project__terms {
+    grid-template-columns: 140px auto;
+    margin-bottom: 90px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 650px) {
+  .about-project__terms {
+    grid-template-columns: 100px auto;
+    margin-bottom: 70px;
+  }
 }

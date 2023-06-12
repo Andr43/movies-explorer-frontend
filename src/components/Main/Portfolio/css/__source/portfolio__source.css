@@ -19,3 +19,15 @@
 .portfolio__source::after{
   content: url('../../../../../images/portfolio__row.svg');
 }
+
+@media screen and (max-width: 768px) {
+  .portfolio__source{
+    font-size: 28px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 650px) {
+  .portfolio__source{
+    font-size: 18px;
+    line-height: 28px;
+  }
+}

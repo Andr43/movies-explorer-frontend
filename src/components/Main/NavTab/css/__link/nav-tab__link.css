@@ -1,5 +1,6 @@
 .nav-tab__link{
   font-size: 13px;
+  line-height: 16px;
   font-weight: 500;
   color: #fff;
   margin-right: 40px;
@@ -9,4 +10,10 @@
 
 .nav-tab__link:last-child{
   margin-right: 0;
+}
+
+@media screen and (min-width: 320px) and (max-width: 650px) {
+  .nav-tab__link{
+    font-size: 11px;
+  }
 }

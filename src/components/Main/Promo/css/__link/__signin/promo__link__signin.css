@@ -11,3 +11,10 @@
 .promo__link__signin:active{
   background-color: #919191;
 }
+
+@media screen and (min-width: 320px) and (max-width: 650px) {
+  .promo__link__signin {
+    padding: 5px 12px;
+    margin-top: 3px;
+  }
+}

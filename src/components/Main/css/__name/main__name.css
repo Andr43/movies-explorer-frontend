@@ -1,10 +1,17 @@
 .main__name{
   margin: 0;
-  margin-bottom: 70px;
   padding: 0;
   padding-bottom: 23px;
   font-weight: 400;
   font-size: 22px;
   line-height: 26.63px;
   border-bottom: 1px solid #000;
+}
+
+@media screen and (min-width: 320px) and (max-width: 650px) {
+  .main__name{
+    font-size: 18px;
+    line-height: 21.78px;
+    padding-bottom: 28px;
+  }
 }

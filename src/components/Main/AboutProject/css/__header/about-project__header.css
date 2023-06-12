@@ -1,8 +1,24 @@
-.about-project__header{
+.about-project__header {
   margin: 0;
   margin-bottom: 26px;
   padding: 0;
   font-size: 20px;
   line-height: 24.2px;
   font-weight: 400;
+}
+
+@media screen and (max-width: 768px) {
+  .about-project__header {
+    margin-bottom: 22px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 650px) {
+  .about-project__header {
+    margin-bottom: 16px;
+    font-size: 18px;
+    line-height: 21.78px;
+  }
+  .about-project__header:nth-child(2) {
+    grid-row-start: 3;
+  }
 }

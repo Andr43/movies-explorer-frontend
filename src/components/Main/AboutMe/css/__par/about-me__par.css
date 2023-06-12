@@ -7,3 +7,18 @@
   line-height: 22px;
   font-weight: 400;
 }
+
+@media screen and (max-width: 768px) {
+  .about-me__par{
+    font-size: 12px;
+    line-height: 18px;
+    max-width: 364px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 650px) {
+  .about-me__par{
+    font-size: 11px;
+    line-height: 16px;
+    margin-bottom: 40px;
+  }
+}

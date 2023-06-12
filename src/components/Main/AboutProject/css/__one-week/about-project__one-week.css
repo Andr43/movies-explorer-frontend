@@ -10,3 +10,12 @@
   background-color: #000;
   text-align: center;
 }
+
+@media screen and (min-width: 320px) and (max-width: 650px) {
+  .about-project__one-week {
+    font-size: 11px;
+    line-height: 13.31px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+  }
+}
