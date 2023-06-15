@@ -8,8 +8,9 @@
   height: fit-content;
 }
 
-.promo__link__signin:active{
+.promo__link__signin:hover{
   background-color: #919191;
+  color: #fff;
 }
 
 @media screen and (min-width: 320px) and (max-width: 650px) {

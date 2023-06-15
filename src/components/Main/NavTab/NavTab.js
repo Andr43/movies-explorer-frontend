@@ -1,17 +1,15 @@
-import { Link } from "react-router-dom";
-
-function NavTab(props) {
+function NavTab() {
   return (
     <nav className="nav-tab">
-      <Link className="nav-tab__link" onClick={props.onSignOut} to="#about-project">
+      <a className="nav-tab__link" href="#about-project">
         О проекте
-      </Link>
-      <Link className="nav-tab__link" onClick={props.onSignOut} to="#techs">
+      </a>
+      <a className="nav-tab__link" href="#techs">
         Технологии
-      </Link>
-      <Link className="nav-tab__link" onClick={props.onSignOut} to="#about-me">
+      </a>
+      <a className="nav-tab__link" href="#about-me">
         Студент
-      </Link>
+      </a>
     </nav>
   );
 }

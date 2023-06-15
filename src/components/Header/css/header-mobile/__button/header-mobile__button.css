@@ -1,0 +1,10 @@
+.header-mobile__button{
+  margin: 29.16px 29.16px 112.16px 0;
+  padding: 0;
+  border: 0;
+  background: url("../../../../../images/header-mobile__button.svg") no-repeat center center;
+  width: 22px;
+  min-height: 22px;
+  align-self: flex-end;
+  cursor: pointer;
+}

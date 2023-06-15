@@ -1,0 +1,13 @@
+.search-form{
+  margin: 88px auto 80px auto;
+  padding: 0;
+  max-width: 1140px;
+  background-color: #F9F9F9;
+  height: 72px;
+  border-radius: 9px;
+  display: grid;
+  align-items: center;
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-columns: 824px 88px 64px auto;
+  font-family: "Inter", "Arial", sans-serif;
+}

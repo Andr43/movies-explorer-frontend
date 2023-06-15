@@ -1,6 +1,6 @@
 function Portfolio() {
   return (
-    <section className="portfolio" name="portfolio">
+    <section className="portfolio" id="portfolio">
       <h2 className="portfolio__name">Портфолио</h2>
       <div className="portfolio__list">
         <a

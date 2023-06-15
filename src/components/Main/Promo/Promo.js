@@ -7,7 +7,7 @@ function Promo() {
       <header className="promo__header">
         <img
           src={projectLogo}
-          alt="логотип страницы промо"
+          alt="логотип страницы"
           className="promo__logo"
         />
         <nav className="promo__links">

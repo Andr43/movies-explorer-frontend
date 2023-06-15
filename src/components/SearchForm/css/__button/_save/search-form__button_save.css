@@ -1,0 +1,23 @@
+.search-form__button_save{
+margin: 0;
+padding: 0;
+border: 0;
+background-color: #000;
+color: #fff;
+width: 58.65px;
+height: 34px;
+border-radius: 48px;
+font-size: 11px;
+line-height: 18px;
+font-weight: 500;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.search-form__button_save::after{
+  content: url("../../../../../images/search-form__button-line.svg");
+  position: relative;
+  height: 40px;
+  left: 40.35px;
+}

@@ -13,6 +13,10 @@
   margin-top: 8px;
 }
 
+.promo__link:hover{
+  color: #7d7d7d;
+}
+
 @media screen and (min-width: 320px) and (max-width: 650px) {
   .promo__link {
     font-size: 10px;
