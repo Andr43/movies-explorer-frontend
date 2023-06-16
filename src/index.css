@@ -54,6 +54,7 @@
 @import url("./components/Header/css/header-mobile/__link/_active/header-mobile__link_active.css");
 @import url("./components/Header/css/header-mobile/__menu/header-mobile__menu.css");
 @import url("./components/SearchForm/css/search-form.css");
+@import url("./components/SearchForm/css/__shorts/search-form__shorts.css");
 @import url("./components/SearchForm/css/__button/_change/search-form__button_change.css");
 @import url("./components/SearchForm/css/__button/_change/_active/search-form__button_change_active.css" );
 @import url("./components/SearchForm/css/__button/_save/search-form__button_save.css");

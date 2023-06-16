@@ -14,8 +14,10 @@ function SearchForm() {
       <button className="search-form__button_save" type="submit">
         Найти
       </button>
+      <div className="search-form__shorts">
       <button onClick={buttonChangeSwitch} className="search-form__button_change" type="button"></button>
       <p className="search-form__par">Короткометражки</p>
+      </div>
     </form>
   );
 }

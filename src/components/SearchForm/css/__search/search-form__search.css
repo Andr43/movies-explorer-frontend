@@ -16,3 +16,14 @@
   line-height: 20px;
   color: #A0A0A0;
 }
+
+@media screen and (max-width: 630px) {
+  .search-form__search{
+background: 0;
+padding: 0;
+margin-left: 19px;
+  }
+  .search-form__search::placeholder{
+    font-size: 14px;
+  }
+}
