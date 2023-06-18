@@ -3,7 +3,7 @@
   grid-template-columns: auto 140px 42px;
 }
 
-@media screen and (min-width: 320px) and (max-width: 650px) {
+@media screen and (min-width: 320px) and (max-width: 708px) {
   .footer__sources {
     display: flex;
     flex-direction: column-reverse;

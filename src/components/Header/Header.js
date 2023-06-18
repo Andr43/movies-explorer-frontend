@@ -2,6 +2,12 @@ import projectLogo from "../../images/project__logo.svg";
 import { Link } from "react-router-dom";
 import HeaderMobileMenu from "./HeaderMobileMenu"
 
+function burgerMenuOpen(){
+const headerMobile = document.querySelector(".header-mobile");
+headerMobile.classList.add("visible");
+headerMobile.classList.remove("invisible");
+}
+
 function Header() {
   return (
     <>
@@ -21,7 +27,7 @@ function Header() {
       <Link className="header__link header__link-account" to="/profile">
         Аккаунт
       </Link>
-      <button className="header__button">
+      <button className="header__button" onClick={burgerMenuOpen}>
       </button>
       </nav>
     </header>

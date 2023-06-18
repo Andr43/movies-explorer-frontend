@@ -60,3 +60,15 @@
 @import url("./components/SearchForm/css/__button/_save/search-form__button_save.css");
 @import url("./components/SearchForm/css/__par/search-form__par.css");
 @import url("./components/SearchForm/css/__search/search-form__search.css");
+@import url("./components/Movies/MoviesCardList/css/movies-card-list.css");
+@import url("./components/Movies/MoviesCardList/css/__button/movies-card-list__button.css");
+@import url("./components/Movies/MoviesCardList/css/__container/movies-card-list__container.css");
+@import url("./components/Movies/MoviesCard/css/movies-card.css");
+@import url("./components/Movies/MoviesCard/css/__button/movies-card__button.css");
+@import url("./components/Movies/MoviesCard/css/__button/_active/movies-card__button_active.css");
+@import url("./components/Movies/MoviesCard/css/__duration/movies-card__duration.css");
+@import url("./components/Movies/MoviesCard/css/__image/movies-card__image.css");
+@import url("./components/Movies/MoviesCard/css/__name/movies-card__name.css");
+
+@import url("./components/visibility/visible/visible.css");
+@import url("./components/visibility/invisible/invisible.css");

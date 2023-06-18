@@ -23,7 +23,7 @@ cursor: pointer;
   left: 40.35px;
 }
 
-@media screen and (max-width: 630px) {
+@media screen and (max-width: 708px) {
   .search-form__button_save{
     justify-self: end;
     margin-right: 19px;

@@ -1,10 +1,16 @@
 import { Link } from "react-router-dom";
 
+function burgerMenuClose(){
+  const headerMobile = document.querySelector(".header-mobile");
+  headerMobile.classList.add("invisible");
+  headerMobile.classList.remove("visible");
+  }
+
 function HeaderMobileMenu() {
   return (
     <header className="header-mobile">
       <div className="header-mobile__container">
-      <button className="header-mobile__button"></button>
+      <button onClick={burgerMenuClose} className="header-mobile__button"></button>
       <nav className="header-mobile__menu">
         <Link className="header-mobile__link" to="/">
           Главная

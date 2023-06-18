@@ -11,6 +11,7 @@
   grid-template-columns: 824px 88px auto;
   font-family: "Inter", "Arial", sans-serif;
   position: relative;
+  z-index: 1;
 }
 
 @media screen and (max-width: 1200px) {
@@ -28,19 +29,20 @@
 }
 @media screen and (max-width: 768px) {
   .search-form{
-    max-width: 608px;
-    grid-template-columns: 305px 88px auto;
+    max-width: 708px;
+    grid-template-columns: 405px 88px auto;
   }
 }
-@media screen and (max-width: 630px) {
+@media screen and (max-width: 708px) {
   .search-form{
     max-width: 450px;
     grid-template-columns: 150px auto;
     height: 72px;
+    margin-bottom: 109px;
   }
 }
 @media screen and (min-width: 320px) and (max-width: 450px) {
   .search-form{
-    max-width: 284px;
+    max-width: 300px;
   }
 }

@@ -1,0 +1,7 @@
+.movies-card__button_active{
+  background-color: #000;
+}
+
+.movies-card__button_active::before{
+  content: url("../../../../../../images/movies-card__save-logo-white.svg");
+}
