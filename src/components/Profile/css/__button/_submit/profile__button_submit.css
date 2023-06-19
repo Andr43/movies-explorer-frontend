@@ -1,0 +1,18 @@
+.profile__button_submit {
+  margin: 0;
+  margin-bottom: 16px;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  font-size: 13px;
+  line-height: 15.73px;
+  font-weight: 500;
+  cursor: pointer;
+  min-width: 410px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 450px) {
+  .profile__button_submit {
+    min-width: 260px;
+  }
+}

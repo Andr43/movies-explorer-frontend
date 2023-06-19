@@ -1,0 +1,25 @@
+.profile__edit{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #E8E8E8;
+  padding-bottom: 16px;
+  margin-bottom: 17px;
+}
+
+.profile__edit:last-of-type{
+  border: 0;
+  padding-bottom: 0;
+  margin-bottom: 220px;
+}
+
+@media screen and (max-width: 768px) {
+  .profile__edit:last-of-type{
+    margin-bottom: 210px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 450px) {
+  .profile__edit:last-of-type{
+    margin-bottom: 379px;
+  }
+}

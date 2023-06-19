@@ -5,6 +5,7 @@
   position: absolute;
   right: 0;
   top: 0;
+  display: none;
   visibility: hidden;
   opacity: 0;
   transition-duration: 200ms;

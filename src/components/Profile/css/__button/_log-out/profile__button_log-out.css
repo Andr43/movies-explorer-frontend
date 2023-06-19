@@ -1,0 +1,15 @@
+.profile__button_log-out{
+  display: block;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #FF4062;
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 15.73px;
+  font-weight: 500;
+}
+
+.profile__button_log-out:hover{
+  color: #ffa5b6;
+}

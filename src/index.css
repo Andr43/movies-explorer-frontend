@@ -61,14 +61,24 @@
 @import url("./components/SearchForm/css/__par/search-form__par.css");
 @import url("./components/SearchForm/css/__search/search-form__search.css");
 @import url("./components/Movies/MoviesCardList/css/movies-card-list.css");
+@import url("./components/Movies/MoviesCardList/css/_saved/movies-card-list_saved.css");
 @import url("./components/Movies/MoviesCardList/css/__button/movies-card-list__button.css");
 @import url("./components/Movies/MoviesCardList/css/__container/movies-card-list__container.css");
+@import url("./components/Movies/MoviesCardList/css/__container/_saved/movies-card-list__container_saved.css");
 @import url("./components/Movies/MoviesCard/css/movies-card.css");
 @import url("./components/Movies/MoviesCard/css/__button/movies-card__button.css");
 @import url("./components/Movies/MoviesCard/css/__button/_active/movies-card__button_active.css");
 @import url("./components/Movies/MoviesCard/css/__duration/movies-card__duration.css");
 @import url("./components/Movies/MoviesCard/css/__image/movies-card__image.css");
 @import url("./components/Movies/MoviesCard/css/__name/movies-card__name.css");
+@import url("./components/SavedMovies/SavedMoviesCard/css/__button/_delete/movies-card__button_delete.css");
+@import url("./components/Profile/css/profile.css");
+@import url("./components/Profile/css/__button/_log-out/profile__button_log-out.css");
+@import url("./components/Profile/css/__button/_submit/profile__button_submit.css");
+@import url("./components/Profile/css/__edit/profile__edit.css");
+@import url("./components/Profile/css/__field/profile__field.css");
+@import url("./components/Profile/css/__name/profile__name.css");
+@import url("./components/Profile/css/__par/profile__par.css");
 
 @import url("./components/visibility/visible/visible.css");
 @import url("./components/visibility/invisible/invisible.css");

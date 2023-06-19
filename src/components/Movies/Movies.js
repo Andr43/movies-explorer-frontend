@@ -3,7 +3,7 @@ import SearchForm from "../SearchForm/SearchForm.js";
 import MoviesCardList from "./MoviesCardList/MoviesCardList.js";
 import Footer from "../Footer/Footer.js";
 
-function Main() {
+function Movies() {
   return (
     <>
       <Header />
@@ -14,4 +14,4 @@ function Main() {
   );
 }
 
-export default Main;
+export default Movies;

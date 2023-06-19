@@ -1,0 +1,8 @@
+.movies-card__button_delete{
+  background: url("../../../../../../images/movies-card__button_delete.svg") no-repeat center center/8px 8px, #F9F9F9;
+
+}
+
+.movies-card__button_delete::before{
+  content: "";
+}
