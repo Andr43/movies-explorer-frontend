@@ -90,6 +90,10 @@
 @import url("./components/Auth/css/__links/auth__links.css");
 @import url("./components/Auth/css/__link/auth__link.css");
 @import url("./components/Auth/css/__question/auth__question.css");
-
+@import url("./components/Error/css/error.css");
+@import url("./components/Error/css/__header/error__header.css");
+@import url("./components/Error/css/__link/error__link.css");
+@import url("./components/Error/css/__sub-header/error__sub-header.css");
+@import url("./components/Preloader/css/preloader.css");
 @import url("./components/visibility/visible/visible.css");
 @import url("./components/visibility/invisible/invisible.css");
