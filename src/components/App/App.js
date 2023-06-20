@@ -5,6 +5,8 @@ import Main from "../Main/Main.js";
 import Movies from "../Movies/Movies.js";
 import SavedMovies from "../SavedMovies/SavedMovies.js";
 import Profile from "../Profile/Profile.js";
+import Register from "../Auth/Register/Register.js";
+import Login from "../Auth/Login/Login.js";
 
 function App() {
   return (
@@ -14,9 +16,9 @@ function App() {
       <Route path="/movies" element={<Movies />} />
       <Route path="/saved-movies" element={<SavedMovies />} />
       <Route path="/profile" element={<Profile />} />
-      <Route path="/signin" element={''} />
-      <Route path="/signup" element={''} />
-      <Route path="/signout" element={''} />
+      <Route path="/signin" element={<Login />} />
+      <Route path="/signup" element={<Register />} />
+      <Route path="/signout" element={<Login />} />
       </Routes>
       </>
   );

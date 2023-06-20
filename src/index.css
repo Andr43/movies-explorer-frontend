@@ -79,6 +79,17 @@
 @import url("./components/Profile/css/__field/profile__field.css");
 @import url("./components/Profile/css/__name/profile__name.css");
 @import url("./components/Profile/css/__par/profile__par.css");
+@import url("./components/Auth/css/auth.css");
+@import url("./components/Auth/css/__logo/auth__logo.css");
+@import url("./components/Auth/css/__button/auth__button.css");
+@import url("./components/Auth/css/__button/_login/auth__button_login.css");
+@import url("./components/Auth/css/__field/auth__field.css");
+@import url("./components/Auth/css/__field/_name/auth__field_name.css");
+@import url("./components/Auth/css/__form/auth__form.css");
+@import url("./components/Auth/css/__header/auth__header.css");
+@import url("./components/Auth/css/__links/auth__links.css");
+@import url("./components/Auth/css/__link/auth__link.css");
+@import url("./components/Auth/css/__question/auth__question.css");
 
 @import url("./components/visibility/visible/visible.css");
 @import url("./components/visibility/invisible/invisible.css");
