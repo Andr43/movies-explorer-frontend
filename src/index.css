@@ -94,6 +94,11 @@
 @import url("./components/Error/css/__header/error__header.css");
 @import url("./components/Error/css/__link/error__link.css");
 @import url("./components/Error/css/__sub-header/error__sub-header.css");
+@import url("./components/ResultPopup/css/popup-result.css");
+@import url("./components/ResultPopup/css/__button/popup-result__button.css");
+@import url("./components/ResultPopup/css/__container/popup-result__container.css");
+@import url("./components/ResultPopup/css/__image/popup-result__image.css");
+@import url("./components/ResultPopup/css/__par/popup-result__par.css");
 @import url("./components/Preloader/css/preloader.css");
 @import url("./components/visibility/visible/visible.css");
 @import url("./components/visibility/invisible/invisible.css");

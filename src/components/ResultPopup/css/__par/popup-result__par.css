@@ -1,0 +1,16 @@
+.popup-result__par {
+  margin: 0 auto;
+  margin-bottom: 60px;
+  max-width: 358px;
+  text-align: center;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 450px) {
+  .popup-result__par {
+    margin: 25px 22px 45px 22px;
+    font-size: 18px;
+    line-height: 21.78px;
+  }
+}
