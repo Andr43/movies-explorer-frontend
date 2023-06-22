@@ -1,11 +1,10 @@
-import projectLogo from "../../../images/project__logo.svg";
 import { Link } from "react-router-dom";
 
 function Register() {
   return (
     <>
       <section className="auth">
-        <img src={projectLogo} alt="логотип страницы" className="auth__logo" />
+      <Link className="auth__logo header__logo" to="/"></Link>
         <h1 className="auth__header">Добро пожаловать!</h1>
         <form className="auth__form" action="#" noValidate>
           <span className="auth__field_name">Имя</span>

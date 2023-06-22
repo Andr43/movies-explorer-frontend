@@ -10,7 +10,7 @@ function SearchForm() {
       action="#"
       noValidate
     >
-      <input type="search" className="search-form__search" placeholder="Фильм"/>
+      <input type="search" className="search-form__search" placeholder="Фильм" required/>
       <button className="search-form__button_save" type="submit">
         Найти
       </button>

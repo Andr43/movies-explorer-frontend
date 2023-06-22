@@ -18,6 +18,10 @@
   color: #a0a0a0;
 }
 
+.search-form__search:focus::placeholder{
+  visibility: hidden;
+}
+
 @media screen and (max-width: 708px) {
   .search-form__search {
     background: 0;

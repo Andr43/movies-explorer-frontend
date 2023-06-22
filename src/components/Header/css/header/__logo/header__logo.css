@@ -1,0 +1,12 @@
+.header__logo{
+  display: block;
+  margin: 0;
+  padding: 0;
+  background: url("../../../../../images/project__logo.svg");
+  width: 38px;
+  height: 38px;
+}
+
+.header__logo:hover{
+opacity: .4;
+}

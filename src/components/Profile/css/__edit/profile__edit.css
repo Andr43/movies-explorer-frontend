@@ -23,3 +23,8 @@
     margin-bottom: 379px;
   }
 }
+@media screen and (max-height: 760px) {
+  .profile__edit:last-of-type{
+    margin-bottom: 255px;
+  }
+}

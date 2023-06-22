@@ -22,7 +22,7 @@ function HeaderMobileMenu() {
           Сохранённые фильмы
         </Link>
         <Link
-          className="header__link-account"
+          className="header__link_account"
           to="/profile"
         >
           Аккаунт

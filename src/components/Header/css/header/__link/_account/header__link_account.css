@@ -1,4 +1,4 @@
-.header__link-account {
+.header__link_account {
   max-width: fit-content;
   font-size: 14px;
   line-height: 16px;
@@ -11,7 +11,7 @@
   text-decoration: none;
 }
 
-.header__link-account:hover{
+.header__link_account:hover{
   background-color: #d5d5d5;
   color: #000;
 }

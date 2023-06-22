@@ -24,21 +24,25 @@ function AboutMe() {
           target="_blank"
           href="https://github.com/Andr43"
           className="about-me__source"
+          rel="noreferrer"
         ></a>
         <a
           target="_blank"
           href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJZZQwKQTZTkSGShKpkRsNtJchzdsrGnKVXBFcwdwQqRFTQdxdgslNQFkgFvqKXxCpRSFlV"
           className="about-me__source"
+          rel="noreferrer"
         ></a>
         <a
           target="_blank"
           href="https://t.me/AndreyM43"
           className="about-me__source"
+          rel="noreferrer"
         ></a>
         <a
           target="_blank"
           href="https://instagram.com/andrewmusinov?igshid=YmMyMTA2M2Y="
-          className="about-me__source"
+          className="about-me__source" 
+          rel="noreferrer"
         ></a>
       </div>
       </div>

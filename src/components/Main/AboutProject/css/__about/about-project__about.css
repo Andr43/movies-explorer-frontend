@@ -5,6 +5,16 @@
   margin-top: 70px;
 }
 
+@media screen and (max-width: 1200px) {
+  .about-project__about {
+    grid-gap: 0 60px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .about-project__about {
+    grid-gap: 0 30px;
+  }
+}
 @media screen and (max-width: 768px) {
   .about-project__about {
     margin-bottom: 93px;

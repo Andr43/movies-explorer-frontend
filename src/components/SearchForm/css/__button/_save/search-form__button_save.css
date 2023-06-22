@@ -23,6 +23,10 @@ cursor: pointer;
   left: 40.35px;
 }
 
+.search-form__button_save:hover{
+  opacity: .4;
+  }
+
 @media screen and (max-width: 708px) {
   .search-form__button_save{
     justify-self: end;
