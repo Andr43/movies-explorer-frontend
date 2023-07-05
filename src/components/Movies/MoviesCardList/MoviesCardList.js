@@ -2,15 +2,23 @@ import MoviesCard from "../MoviesCard/MoviesCard.js";
 import SavedMoviesCard from "../../SavedMovies/SavedMoviesCard/SavedMoviesCard.js";
 import { useLocation } from "react-router-dom"; 
 
-function MoviesCardList() {
+function MoviesCardList(props) {
   const location = useLocation(); 
-
   return (
-    <section className={location.pathname.includes("saved-movies") ? "movies-card-list movies-card-list_saved" : "movies-card-list"}>
-      <ul className={location.pathname.includes("saved-movies") ? "movies-card-list__container movies-card-list__container_saved" : "movies-card-list__container"}>
- {location.pathname.includes("saved-movies") ? <SavedMoviesCard /> : <MoviesCard />}
+    <section className="movies-card-list">
+      <ul className="movies-card-list__container">
+      {props.movies.slice(0, props.visibleItems).map((props) => (
+        location.pathname.includes("saved-movies") ? <SavedMoviesCard key={props.id}
+        movie={props} visible={props.visibleItems > 0} /> : <MoviesCard key={props.id}
+        movie={props}
+        visible={props.visibleItems > 0} />
+          ))}
       </ul>
-      {location.pathname.includes("saved-movies") ? "" : <button className="movies-card-list__button">Ещё</button>}
+      {props.visibleItems < props.movies.length && props.movies.length >= 3 && (
+        <button onClick={props.showMoreFilms} className="movies-card-list__button">
+          Ещё
+        </button>
+      )}
     </section>
   );
 }

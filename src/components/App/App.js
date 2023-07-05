@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Main from "../Main/Main.js";
@@ -10,23 +10,71 @@ import Login from "../Auth/Login/Login.js";
 import Error from "../Error/Error.js";
 import Preloader from "../Preloader/Preloader.js";
 import ResultPopup from "../ResultPopup/ResultPopup.js";
+import * as moviesApi from "../../utils/MoviesApi.js";
 
 function App() {
+const [movies, setMovies] = useState([]);
+const [visibleItems, setVisibleItems] = useState(12);
+console.log(visibleItems)
+useEffect(() => {
+  filmsSearch();
+  window.addEventListener("resize", handleResize);
+  return () => {
+    window.removeEventListener("resize", handleResize);
+  };
+}, []);
+
+function filmsSearch(data) {
+  moviesApi.getFilms().then((res) => {
+    const filteredMovies = res.filter((movie) => {
+      const movieName = movie.nameRU;
+      return movieName.indexOf(data) >= 0;
+    });
+    setMovies(filteredMovies);
+})
+};
+
+function handleResize() {
+  const width = window.innerWidth;
+  if (width <= 480) {
+    setVisibleItems(5);
+  } else if (width <= 768) {
+    setVisibleItems(8);
+  } else {
+    setVisibleItems(12);
+  }
+}
+
+  function showMoreFilms() {
+    const width = window.innerWidth;
+    if (width <= 768) {
+      setVisibleItems(prevVisibleItems => prevVisibleItems + 2);
+    } else {
+      setVisibleItems(prevVisibleItems => prevVisibleItems + 3);
+    }
+  }
+
   return (
     <>
       <Routes>
-      <Route path="/" element={<Main />} />
-      <Route path="/movies" element={<Movies />} />
-      <Route path="/saved-movies" element={<SavedMovies />} />
-      <Route path="/profile" element={<Profile />} />
-      <Route path="/signin" element={<Login />} />
-      <Route path="/signup" element={<Register />} />
-      <Route path="/signout" element={<Login />} />
-      <Route path="/error" element={<Error />} />
-      <Route path="/preloader" element={<Preloader />} />
-      <Route path="/result" element={<ResultPopup />} />
+        <Route path="/" element={<Main />} />
+        <Route
+          path="/movies"
+          element={<Movies visibleItems={visibleItems} showMoreFilms={showMoreFilms} filmsSearch={filmsSearch} movies={movies} />}
+        />
+        <Route
+          path="/saved-movies"
+          element={<SavedMovies filmsSearch={filmsSearch} movies={movies} />}
+        />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/signin" element={<Login />} />
+        <Route path="/signup" element={<Register />} />
+        <Route path="/signout" element={<Login />} />
+        <Route path="/error" element={<Error />} />
+        <Route path="/preloader" element={<Preloader />} />
+        <Route path="/result" element={<ResultPopup />} />
       </Routes>
-      </>
+    </>
   );
 }
 

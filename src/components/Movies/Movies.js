@@ -3,12 +3,12 @@ import SearchForm from "../SearchForm/SearchForm.js";
 import MoviesCardList from "./MoviesCardList/MoviesCardList.js";
 import Footer from "../Footer/Footer.js";
 
-function Movies() {
+function Movies(props) {
   return (
     <>
       <Header />
-      <SearchForm />
-      <MoviesCardList />
+      <SearchForm filmsSearch={props.filmsSearch} />
+      <MoviesCardList showMoreFilms={props.showMoreFilms} visibleItems={props.visibleItems} movies={props.movies} />
       <Footer />
     </>
   );
