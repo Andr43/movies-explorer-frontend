@@ -1,0 +1,21 @@
+.header__menu {
+  display: grid;
+  grid-template-columns: 70px 888px auto;
+  align-items: center;
+}
+@media screen and (max-width: 1200px) {
+  .header__menu{
+    grid-template-columns: 70px 750px auto;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .header__menu{
+    grid-template-columns: 70px 560px auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header__menu{
+max-width: 44px;
+display: block;
+  }
+}

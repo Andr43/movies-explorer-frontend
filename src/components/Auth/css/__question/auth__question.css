@@ -1,0 +1,16 @@
+.auth__question {
+  margin: 0;
+  margin-right: 6px;
+  padding: 0;
+  font-size: 14px;
+  line-height: 16.94px;
+  color: #a0a0a0;
+}
+
+@media screen and (min-width: 320px) and (max-width: 450px) {
+  .auth__question {
+    margin-right: 7px;
+    font-size: 12px;
+    line-height: 14.52px;
+  }
+}

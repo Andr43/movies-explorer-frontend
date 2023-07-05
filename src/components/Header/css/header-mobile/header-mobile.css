@@ -1,0 +1,13 @@
+.header-mobile {
+  background: rgba(0,0,0,0.3);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition-duration: 200ms;
+  z-index: 2;
+}

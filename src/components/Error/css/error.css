@@ -1,0 +1,21 @@
+.error{
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: 246px;
+  margin-bottom: 60px;
+  font-family: "Inter", "Arial", sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+  .error {
+    margin-top: 408px;
+    margin-bottom: 222px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 450px) {
+  .error {
+    max-width: 300px;
+    margin-top: 329px;
+    margin-bottom: 30px;
+  }
+}

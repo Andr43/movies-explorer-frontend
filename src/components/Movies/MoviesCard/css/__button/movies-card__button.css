@@ -1,0 +1,43 @@
+.movies-card__button{
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 0;
+  align-self: center;
+  margin-left: 77%;
+  padding: 0;
+  background-color: #F9F9F9;
+  cursor: pointer;
+}
+
+.movies-card__button::before{
+  content: url("../../../../../images/movies-card__save-logo.svg");
+  position: relative;
+  top: 5%;
+}
+
+@media screen and (max-width: 1200px) {
+  .movies-card__button{
+    margin-left: 68%;
+}
+}
+
+@media screen and (max-width: 768px) {
+  .movies-card__button{
+    margin-left: 77%;
+}
+}
+
+@media screen and (max-width: 708px) {
+  .movies-card__button{
+    margin-left: 85%;
+}
+}
+@media screen and (max-width: 450px) {
+  .movies-card__button{
+    margin-left: 72%;
+}
+}

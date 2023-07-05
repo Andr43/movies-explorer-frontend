@@ -1,0 +1,8 @@
+.nav-tab{
+  background: #000;
+  min-height: 66px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Inter", "Arial", sans-serif;
+}

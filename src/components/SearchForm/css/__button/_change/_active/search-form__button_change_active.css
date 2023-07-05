@@ -1,0 +1,7 @@
+.search-form__button_change_active{
+  background-color: #afafaf;
+}
+
+.search-form__button_change_active::after{
+  left: -10px;
+}

@@ -1,0 +1,7 @@
+@media screen and (min-width: 320px) and (max-width: 450px) {
+  .auth__logo {
+    max-width: 38px;
+    max-height: 38px;
+    align-self: center;
+  }
+}

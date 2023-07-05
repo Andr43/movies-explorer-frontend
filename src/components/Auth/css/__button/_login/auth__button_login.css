@@ -1,0 +1,9 @@
+.auth__button_login{
+  margin-top: 197px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 450px) {
+  .auth__button_login {
+    margin-top: 285px;
+  }
+}

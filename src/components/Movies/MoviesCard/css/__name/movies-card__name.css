@@ -1,0 +1,26 @@
+.movies-card__name{
+  margin: 0;
+  margin-left: 14px;
+  margin-top: 14px;
+  padding: 0;
+  font-size: 15px;
+  line-height: 18.15px;
+  font-weight: 500;
+  max-width: fit-content;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1024px) {
+  .movies-card__name{
+font-size: 11px;
+line-height: 13px;
+}
+}
+@media screen and (max-width: 768px) {
+  .movies-card__name{
+  font-size: 15px;
+  line-height: 18.15px;
+  }
+}

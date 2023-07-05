@@ -1,0 +1,38 @@
+.search-form__button_save{
+margin: 0;
+padding: 0;
+border: 0;
+background-color: #000;
+color: #fff;
+width: 58.65px;
+height: 34px;
+border-radius: 48px;
+font-size: 11px;
+line-height: 18px;
+font-weight: 500;
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+}
+
+.search-form__button_save::after{
+  content: url("../../../../../images/search-form__button-line.svg");
+  position: relative;
+  height: 40px;
+  left: 40.35px;
+}
+
+.search-form__button_save:hover{
+  opacity: .4;
+  }
+
+@media screen and (max-width: 708px) {
+  .search-form__button_save{
+    justify-self: end;
+    margin-right: 19px;
+  }
+  .search-form__button_save::after{
+    content: "";
+  }
+}

@@ -1,0 +1,29 @@
+.about-project{
+  max-width: 1140px;
+  margin: 110px auto;
+  font-family: "Inter", "Arial", sans-serif;
+}
+
+@media screen and (max-width: 1200px) {
+  .about-project{
+    max-width: 900px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .about-project{
+    max-width: 770px;
+    margin: 100px auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .about-project{
+    max-width: 668px;
+    margin: 90px auto;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 650px) {
+  .about-project{
+    max-width: 284px;
+    margin: 70px auto;
+  }
+}

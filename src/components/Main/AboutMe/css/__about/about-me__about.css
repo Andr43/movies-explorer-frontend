@@ -1,0 +1,17 @@
+.about-me__about{
+display: grid;
+grid-template-rows: 76px 46px auto;
+margin-top: 66px;
+}
+
+@media screen and (max-width: 768px) {
+  .about-me__about{
+    margin-top: 66px;
+    grid-template-rows: 56px 38px 178px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 650px) {
+  .about-me__about{
+      margin-top: 60px;
+  }
+}

@@ -1,0 +1,24 @@
+.nav-tab__link{
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 500;
+  color: #fff;
+  margin-right: 40px;
+  text-decoration: none;
+  border-bottom: 1px solid #fff;
+}
+
+.nav-tab__link:last-child{
+  margin-right: 0;
+}
+
+.nav-tab__link:hover{
+  color: #afafaf;
+  border-bottom: 1px solid #afafaf;
+}
+
+@media screen and (min-width: 320px) and (max-width: 650px) {
+  .nav-tab__link{
+    font-size: 11px;
+  }
+}

@@ -1,0 +1,15 @@
+.techs__name{
+  margin-bottom: 90px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .techs__name{
+    margin-bottom: 80px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 650px) {
+  .techs__name{
+    margin-bottom: 60px;
+  }
+}

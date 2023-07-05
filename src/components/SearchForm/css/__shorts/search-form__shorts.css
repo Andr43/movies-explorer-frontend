@@ -1,0 +1,15 @@
+.search-form__shorts{
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+}
+
+@media screen and (max-width: 708px) {
+  .search-form__shorts {
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    margin-left: 0;
+    transform:translate(-50%, 48px);
+  }
+}

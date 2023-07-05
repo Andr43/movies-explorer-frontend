@@ -1,0 +1,29 @@
+.about-project__about{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 110px;
+  margin-top: 70px;
+}
+
+@media screen and (max-width: 1200px) {
+  .about-project__about {
+    grid-gap: 0 60px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .about-project__about {
+    grid-gap: 0 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .about-project__about {
+    margin-bottom: 93px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 650px) {
+  .about-project__about{
+    grid-template-columns: repeat(1, 1fr);
+    margin-bottom: 0;
+    margin-top: 60px;
+  }
+}

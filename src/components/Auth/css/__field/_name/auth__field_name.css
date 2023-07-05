@@ -1,0 +1,9 @@
+.auth__field_name {
+  display: block;
+  margin: 0;
+  margin-bottom: 5px;
+  padding: 0;
+  font-size: 12px;
+  line-height: 12.1px;
+  color: #a0a0a0;
+}

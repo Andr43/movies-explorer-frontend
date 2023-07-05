@@ -1,0 +1,20 @@
+.about-project__four-weeks{
+  margin: 0;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  max-height: 18px;
+  font-size: 14px;
+  line-height: 16.94px;
+  font-weight: 400;
+  background-color: #F2F2F2;
+  text-align: center;
+}
+
+@media screen and (min-width: 320px) and (max-width: 650px) {
+  .about-project__four-weeks {
+    font-size: 11px;
+    line-height: 13.31px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+  }
+}
