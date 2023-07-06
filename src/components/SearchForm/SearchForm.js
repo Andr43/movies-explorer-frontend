@@ -7,12 +7,12 @@ function buttonChangeSwitch(){
 function SearchForm(props) {
   const [searchValue, setSearchValue] = useState("");
 
-  const handleSearchChange = (event) => {
-    setSearchValue(event.target.value);
+  const handleSearchChange = (evt) => {
+    setSearchValue(evt.target.value);
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleSubmit = (evt) => {
+    evt.preventDefault();
     props.filmsSearch(searchValue);
   };
 

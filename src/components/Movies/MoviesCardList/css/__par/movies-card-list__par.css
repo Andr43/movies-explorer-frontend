@@ -1,0 +1,7 @@
+.movies-card-list__par{
+  margin: 0;
+  padding: 0;
+  grid-column-start: 2;
+  color: #a7a7a7;
+  font-size: 20px;
+}

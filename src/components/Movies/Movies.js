@@ -8,7 +8,7 @@ function Movies(props) {
     <>
       <Header />
       <SearchForm filmsSearch={props.filmsSearch} />
-      <MoviesCardList showMoreFilms={props.showMoreFilms} visibleItems={props.visibleItems} movies={props.movies} />
+      <MoviesCardList loading={props.loading} showMoreFilms={props.showMoreFilms} visibleItems={props.visibleItems} movies={props.movies} />
       <Footer />
     </>
   );

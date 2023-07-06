@@ -8,14 +8,14 @@ import Profile from "../Profile/Profile.js";
 import Register from "../Auth/Register/Register.js";
 import Login from "../Auth/Login/Login.js";
 import Error from "../Error/Error.js";
-import Preloader from "../Preloader/Preloader.js";
 import ResultPopup from "../ResultPopup/ResultPopup.js";
 import * as moviesApi from "../../utils/MoviesApi.js";
 
 function App() {
 const [movies, setMovies] = useState([]);
 const [visibleItems, setVisibleItems] = useState(12);
-console.log(visibleItems)
+const [loading, setLoading] = useState(true);
+
 useEffect(() => {
   filmsSearch();
   window.addEventListener("resize", handleResize);
@@ -25,11 +25,13 @@ useEffect(() => {
 }, []);
 
 function filmsSearch(data) {
+  setLoading(true);
   moviesApi.getFilms().then((res) => {
     const filteredMovies = res.filter((movie) => {
       const movieName = movie.nameRU;
       return movieName.indexOf(data) >= 0;
     });
+    setLoading(false);
     setMovies(filteredMovies);
 })
 };
@@ -60,7 +62,7 @@ function handleResize() {
         <Route path="/" element={<Main />} />
         <Route
           path="/movies"
-          element={<Movies visibleItems={visibleItems} showMoreFilms={showMoreFilms} filmsSearch={filmsSearch} movies={movies} />}
+          element={<Movies loading={loading} visibleItems={visibleItems} showMoreFilms={showMoreFilms} filmsSearch={filmsSearch} movies={movies} />}
         />
         <Route
           path="/saved-movies"
@@ -71,7 +73,6 @@ function handleResize() {
         <Route path="/signup" element={<Register />} />
         <Route path="/signout" element={<Login />} />
         <Route path="/error" element={<Error />} />
-        <Route path="/preloader" element={<Preloader />} />
         <Route path="/result" element={<ResultPopup />} />
       </Routes>
     </>

@@ -1,25 +1,6 @@
 import moviesCardImage from "../../../images/movies-card__image.jpg";
 
-function SavedMoviesCard() {
-  const listButton = document.querySelector(".movies-card-list__button");
-  const moviesCard = document.querySelector(".movies-card-list__container").getElementsByTagName('li').length
-  const moviesCardList = document.querySelector(".movies-card-list");
-  const moviesCardListContainer = document.querySelector(".movies-card-list__container");
-
-  function cardsQuantityCheck(){
-    if(moviesCard >= 3){
-      listButton.classList.add("visible");
-      listButton.classList.remove("invisible");
-      moviesCardList.classList.remove("movies-card-list_saved");
-      moviesCardListContainer.classList.remove("movies-card-list__container_saved");
-    } else {
-      listButton.classList.add("invisible");
-      listButton.classList.remove("visible");
-      moviesCardList.classList.add("movies-card-list_saved");
-      moviesCardListContainer.classList.add("movies-card-list__container_saved");
-    }
-  }
-  cardsQuantityCheck();
+function SavedMoviesCard(props) {
 
   return (
     <>

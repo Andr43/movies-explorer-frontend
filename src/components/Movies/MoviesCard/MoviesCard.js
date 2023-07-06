@@ -1,40 +1,28 @@
+import { React, useState } from "react";
+
 function MoviesCard(props) {
-  const listButton = document.querySelector(".movies-card-list__button");
-  const moviesCard = document.querySelector(".movies-card-list__container").getElementsByTagName('li').length
-  const moviesCardList = document.querySelector(".movies-card-list");
-  const moviesCardListContainer = document.querySelector(".movies-card-list__container");
+  const [isSaved, setIsSaved] = useState(false);
 
   function saveFilm() {
-    const moviesCardButton = document.querySelectorAll(".movies-card__button");
-    moviesCardButton.forEach((button) => {
-      button.classList.toggle("movies-card__button_active");
-    });
+    if(isSaved === false){
+      setIsSaved(true);
+    } else {
+      setIsSaved(false);
+    }
   }
 
-  // function cardsQuantityCheck(){
-  //   if(moviesCard >= 3){
-  //     listButton.classList.add("visible");
-  //     listButton.classList.remove("invisible");
-  //     moviesCardList.classList.remove("movies-card-list_saved");
-  //     moviesCardListContainer.classList.remove("movies-card-list__container_saved");
-  //   } else {
-  //     listButton.classList.add("invisible");
-  //     listButton.classList.remove("visible");
-  //     moviesCardList.classList.add("movies-card-list_saved");
-  //     moviesCardListContainer.classList.add("movies-card-list__container_saved");
-  //   }
-  // }
-  // cardsQuantityCheck();
   return (
     <li className="movies-card">
       <h3 className="movies-card__name">{props.movie.nameRU}</h3>
       <p className="movies-card__duration">{`${props.movie.duration}м`}</p>
+      <a className="movies-card__link" href={props.movie.trailerLink} target="_blank">
       <img
       src={`https://api.nomoreparties.co${props.movie.image.url}`}
         className="movies-card__image"
         alt="Обложка фильма"
       ></img>
-      <button onClick={saveFilm} className="movies-card__button"></button>
+      </a>
+      <button onClick={saveFilm} className={`movies-card__button ${isSaved ? "movies-card__button_active" : "" }`}></button>
     </li>
   );
 }

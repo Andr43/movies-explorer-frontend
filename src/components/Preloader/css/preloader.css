@@ -47,7 +47,8 @@
   height: 100%;
   z-index: 10;
   position: absolute;
-  top: 20%;
+  top: 10%;
+  right: 0;
 }
 
 .preloader__container {
