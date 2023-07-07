@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 function buttonChangeSwitch(){
   const buttonChange = document.querySelector(".search-form__button_change");
   buttonChange.classList.toggle("search-form__button_change_active")
@@ -7,6 +7,13 @@ function buttonChangeSwitch(){
 function SearchForm(props) {
   const [searchValue, setSearchValue] = useState("");
 
+  useEffect(() => {
+    const storedQuery = localStorage.getItem('searchQuery');
+    if (storedQuery) {
+      setSearchValue(storedQuery);
+    }
+  }, []);
+  
   const handleSearchChange = (evt) => {
     setSearchValue(evt.target.value);
   };
@@ -14,6 +21,7 @@ function SearchForm(props) {
   const handleSubmit = (evt) => {
     evt.preventDefault();
     props.filmsSearch(searchValue);
+localStorage.setItem('searchQuery', searchValue);
   };
 
   return (

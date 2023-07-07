@@ -15,9 +15,16 @@ function App() {
 const [movies, setMovies] = useState([]);
 const [visibleItems, setVisibleItems] = useState(12);
 const [loading, setLoading] = useState(true);
+const [searchQuery, setSearchQuery] = useState('');
 
 useEffect(() => {
-  filmsSearch();
+  const storedQuery = localStorage.getItem('searchQuery');
+  if (storedQuery) {
+    setSearchQuery(storedQuery);
+    filmsSearch(storedQuery);
+  } else {
+    filmsSearch();
+  } 
   window.addEventListener("resize", handleResize);
   return () => {
     window.removeEventListener("resize", handleResize);
@@ -62,7 +69,7 @@ function handleResize() {
         <Route path="/" element={<Main />} />
         <Route
           path="/movies"
-          element={<Movies loading={loading} visibleItems={visibleItems} showMoreFilms={showMoreFilms} filmsSearch={filmsSearch} movies={movies} />}
+          element={<Movies searchResult={localStorage.getItem('moviesResults')} loading={loading} visibleItems={visibleItems} showMoreFilms={showMoreFilms} filmsSearch={filmsSearch} movies={movies} />}
         />
         <Route
           path="/saved-movies"

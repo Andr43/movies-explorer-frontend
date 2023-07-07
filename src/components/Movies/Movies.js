@@ -7,7 +7,7 @@ function Movies(props) {
   return (
     <>
       <Header />
-      <SearchForm filmsSearch={props.filmsSearch} />
+      <SearchForm searchResult={props.searchResult} filmsSearch={props.filmsSearch} />
       <MoviesCardList loading={props.loading} showMoreFilms={props.showMoreFilms} visibleItems={props.visibleItems} movies={props.movies} />
       <Footer />
     </>
