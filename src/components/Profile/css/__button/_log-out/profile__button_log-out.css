@@ -1,7 +1,9 @@
 .profile__button_log-out{
   display: block;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
+  border: 0;
+  background-color: transparent;
   text-align: center;
   color: #FF4062;
   text-decoration: none;

@@ -5,6 +5,7 @@ import Preloader from "../../Preloader/Preloader.js";
 
 function MoviesCardList(props) {
   const location = useLocation(); 
+  const buttonText = props.isSearchFormEmpty ? "Нужно ввести ключевое слово" : "Ничего не найдено...";
   return (
     <section className="movies-card-list">
       <ul className="movies-card-list__container">
@@ -14,7 +15,7 @@ function MoviesCardList(props) {
         movie={props} visible={props.visibleItems > 0} /> : <MoviesCard key={props.id}
         movie={props}
         visible={props.visibleItems > 0} />
-          )) : <p className="movies-card-list__par">Ничего не найдено...</p>}
+          )) : <p className="movies-card-list__par">{buttonText}</p>}
       </ul>
       {props.visibleItems < props.movies.length && (
         <button onClick={props.showMoreFilms} className="movies-card-list__button">
