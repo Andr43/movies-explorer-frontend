@@ -19,7 +19,7 @@ function Header() {
           <Link className="header__link" to="/saved-movies">
             Сохранённые фильмы
           </Link>
-          <Link className="header__link header__link_account" to="/profile">
+          <Link className="header__link header__link_account" to="/users/me">
             Аккаунт
           </Link>
           <button className="header__button" onClick={burgerMenuOpen}></button>

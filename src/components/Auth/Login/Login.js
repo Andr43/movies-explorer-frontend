@@ -16,10 +16,19 @@ function Login(props) {
     });
   };
 
+  // const validationCheck = () => {
+  //   const buttonSubmit = document.querySelector('auth__button');
+  //   if(!props.loggedIn && formValue === ""){
+  //     buttonSubmit.classList.add('auth__button_inactive')
+  //   }
+  // }
+
   const formSubmit = (e) => {
     e.preventDefault();
     props.onLoginSubmit(formValue.email, formValue.password, formLogin);
+    // validationCheck();
   };
+
   return (
     <>
       <section className="auth">

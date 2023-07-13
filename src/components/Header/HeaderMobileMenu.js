@@ -23,7 +23,7 @@ function HeaderMobileMenu() {
         </Link>
         <Link
           className="header__link_account"
-          to="/profile"
+          to="/users/me"
         >
           Аккаунт
         </Link>

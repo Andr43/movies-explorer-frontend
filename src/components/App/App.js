@@ -9,6 +9,7 @@ import Register from "../Auth/Register/Register.js";
 import Login from "../Auth/Login/Login.js";
 import Error from "../Error/Error.js";
 import ResultPopup from "../ResultPopup/ResultPopup.js";
+import ProtectedRoute from "../ProtectedRoute/ProtectedRoute.js";
 import * as moviesApi from "../../utils/MoviesApi.js";
 import * as UserApi from "../../utils/UserApi.js";
 
@@ -17,12 +18,26 @@ const [movies, setMovies] = useState([]);
 const [currentUser, setCurrentUser] = useState([]);
 const [visibleItems, setVisibleItems] = useState(12);
 const [loading, setLoading] = useState(true);
+const [registeredIn, setRegisteredIn] = useState(false);
 const [loggedIn, setLoggedIn] = useState(false);
 const [searchQuery, setSearchQuery] = useState('');
 const [isSearchFormEmpty, setIsSearchFormEmpty] = useState(false);
 const navigate = useNavigate();
 
+const handleTokenCheck = () => {
+  if (localStorage.getItem("authorized")) {
+    const authorized = localStorage.getItem("authorized");
+    if (authorized) {
+            setLoggedIn(true);
+            navigate("/movies", { replace: true });
+          } else {
+            return
+          }
+    }
+  }
+  
 useEffect(() => {
+  handleTokenCheck();
   const storedQuery = localStorage.getItem('searchQuery');
   if (storedQuery) {
     setSearchQuery(storedQuery);
@@ -30,11 +45,24 @@ useEffect(() => {
   } else {
     filmsSearch();
   } 
+  loggedIn &&
+    UserApi.getUserInfo()
+      .then((userInfo) => {
+        setCurrentUser({
+          name: userInfo.name,
+          email: userInfo.email,
+          id: userInfo._id,
+        })
+      })
+      .catch((err) => {
+        console.error(err)
+        return;
+      });
   window.addEventListener("resize", handleResize);
   return () => {
     window.removeEventListener("resize", handleResize);
   };
-}, []);
+}, [loggedIn]);
 
 const filmsSearch = (data) => {
   setLoading(true);
@@ -74,13 +102,14 @@ const handleResize = () => {
       setVisibleItems(prevVisibleItems => prevVisibleItems + 3);
     }
   }
-
   
   const onRegisterSubmit = (name, email, password, form) => {
     UserApi
       .register(name, email, password)
       .then((res) => {
+        console.log(res)
         if (res) {
+          setRegisteredIn(true);
           form.reset();
           <ResultPopup />;
           navigate("/signin", { replace: true });
@@ -103,17 +132,19 @@ const handleResize = () => {
         .login(email, password)
         .then((res) => {
           if (res) {
-            localStorage.setItem("authorized", res);
             setLoggedIn(true);
+            localStorage.setItem("authorized", "true");
             form.reset();
             navigate("/movies", { replace: true });
             <ResultPopup />;
           }
           if (!res) {
+            setLoggedIn(false);
             return;
           }
         })
         .catch((err) => {
+          setLoggedIn(false);
           console.error(err)
           return;
         });
@@ -124,7 +155,6 @@ const handleResize = () => {
           UserApi
         .signout()
         .then((res) => {
-          console.log('sfdsdg')
           setLoggedIn(false); 
           localStorage.removeItem("authorized"); 
           navigate("/signin"); 
@@ -133,24 +163,51 @@ const handleResize = () => {
           console.error(err)
           return;
         });
+        } else {
+          return
         }
       };
 
+      function handleUpdateUser({ name, email }) {
+        UserApi
+          .updateUserInfo(name, email)
+          .then((res) => {
+            setCurrentUser({
+              ...currentUser,
+              name: name,
+              email: email,
+            });
+          })
+    
+          .catch((err) => {
+            console.error(err)
+            return;
+          });
+      };
   return (
     <>
       <Routes>
         <Route path="/" element={<Main />} />
         <Route
           path="/movies"
-          element={<Movies isSearchFormEmpty={isSearchFormEmpty} searchResult={localStorage.getItem('moviesResults')} loading={loading} visibleItems={visibleItems} showMoreFilms={showMoreFilms} filmsSearch={filmsSearch} movies={movies} />}
+          element={<ProtectedRoute
+            loggedIn={loggedIn}
+            element={
+          <Movies isSearchFormEmpty={isSearchFormEmpty} searchResult={localStorage.getItem('moviesResults')} loading={loading} visibleItems={visibleItems} showMoreFilms={showMoreFilms} filmsSearch={filmsSearch} movies={movies} />} />}
         />
         <Route
           path="/saved-movies"
-          element={<SavedMovies filmsSearch={filmsSearch} movies={movies} />}
+          element={<ProtectedRoute
+            loggedIn={loggedIn}
+            element={
+          <SavedMovies filmsSearch={filmsSearch} movies={movies} />} />}
         />
-        <Route path="/profile" element={<Profile onSignOut={onSignOut} />} />
-        <Route path="/signin" element={<Login onLoginSubmit={onLoginSubmit} />} />
-        <Route path="/signup" element={<Register onRegisterSubmit={onRegisterSubmit} />} />
+        <Route path="/users/me" element={
+        <ProtectedRoute
+        loggedIn={loggedIn}
+        element={<Profile currentUser={currentUser} handleUpdateUser={handleUpdateUser} onSignOut={onSignOut} />} />} />
+        <Route path="/signin" element={<Login loggedIn={loggedIn} onLoginSubmit={onLoginSubmit} />} />
+        <Route path="/signup" element={<Register registeredIn={registeredIn} onRegisterSubmit={onRegisterSubmit} />} />
         <Route path="/signout" element={<Login />} />
         <Route path="/error" element={<Error />} />
         <Route path="/result" element={<ResultPopup />} />

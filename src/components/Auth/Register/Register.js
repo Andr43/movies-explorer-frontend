@@ -7,7 +7,18 @@ function Register(props) {
     email: "",
     password: "",
   });
+  // const [isValidated, setIsValidated] = useState(false);
   const formRegister = document.querySelector(".auth__form");
+
+  // const validationCheck = () => {
+  //   const buttonSubmit = document.querySelector('.auth__button');
+  //   if(!props.registeredIn || formValue === ""){
+  //     buttonSubmit.classList.add('auth__button_inactive')
+  //   } else {
+  //     buttonSubmit.classList.remove('auth__button_inactive');
+  //     setIsValidated(true);
+  //   }
+  // }
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -18,8 +29,14 @@ function Register(props) {
   };
 
   const formSubmit = (e) => {
-    e.preventDefault();
-    props.onRegisterSubmit(formValue.userName, formValue.email, formValue.password, formRegister);
+    // validationCheck();
+    // if(isValidated){
+      e.preventDefault();
+      props.onRegisterSubmit(formValue.userName, formValue.email, formValue.password, formRegister);
+    // } else {
+    //   console.error('Ошибка')
+    //   return
+    // }
   };
 
   return (
@@ -34,7 +51,7 @@ function Register(props) {
           <input className="auth__field" name="email" onChange={handleChange} value={formValue.email} type="email" />
           <span className="auth__field_name">Пароль</span>
           <input className="auth__field" name="password" onChange={handleChange} value={formValue.password} type="password" />
-          <button className="auth__button" type="submit">
+          <button className="auth__button auth__button_inactive" type="submit">
             Зарегистрироваться
           </button>
           <div className="auth__links">

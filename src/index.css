@@ -86,6 +86,7 @@
 @import url("./components/Auth/css/__logo/auth__logo.css");
 @import url("./components/Auth/css/__button/auth__button.css");
 @import url("./components/Auth/css/__button/_login/auth__button_login.css");
+@import url("./components/Auth/css/__button/_inactive/auth__button_inactive.css");
 @import url("./components/Auth/css/__field/auth__field.css");
 @import url("./components/Auth/css/__field/_name/auth__field_name.css");
 @import url("./components/Auth/css/__form/auth__form.css");
