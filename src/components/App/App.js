@@ -21,6 +21,7 @@ const [loading, setLoading] = useState(true);
 const [registeredIn, setRegisteredIn] = useState(false);
 const [loggedIn, setLoggedIn] = useState(false);
 const [searchQuery, setSearchQuery] = useState('');
+const [fetchError, setFetchError] = useState(null);
 const [isSearchFormEmpty, setIsSearchFormEmpty] = useState(false);
 const navigate = useNavigate();
 
@@ -119,7 +120,8 @@ const handleResize = () => {
         }
       })
       .catch((err) => {
-        console.error(err)
+        console.error(err);
+        setFetchError(err);
         return;
       });
     }
@@ -145,7 +147,8 @@ const handleResize = () => {
         })
         .catch((err) => {
           setLoggedIn(false);
-          console.error(err)
+          console.error(err);
+          setFetchError(err);
           return;
         });
       }
@@ -206,8 +209,8 @@ const handleResize = () => {
         <ProtectedRoute
         loggedIn={loggedIn}
         element={<Profile currentUser={currentUser} handleUpdateUser={handleUpdateUser} onSignOut={onSignOut} />} />} />
-        <Route path="/signin" element={<Login loggedIn={loggedIn} onLoginSubmit={onLoginSubmit} />} />
-        <Route path="/signup" element={<Register registeredIn={registeredIn} onRegisterSubmit={onRegisterSubmit} />} />
+        <Route path="/signin" element={<Login fetchError={fetchError} loggedIn={loggedIn} onLoginSubmit={onLoginSubmit} />} />
+        <Route path="/signup" element={<Register fetchError={fetchError} registeredIn={registeredIn} onRegisterSubmit={onRegisterSubmit} />} />
         <Route path="/signout" element={<Login />} />
         <Route path="/error" element={<Error />} />
         <Route path="/result" element={<ResultPopup />} />

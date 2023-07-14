@@ -89,11 +89,13 @@
 @import url("./components/Auth/css/__button/_inactive/auth__button_inactive.css");
 @import url("./components/Auth/css/__field/auth__field.css");
 @import url("./components/Auth/css/__field/_name/auth__field_name.css");
+@import url("./components/Auth/css/__field/_name/_error/auth__field_name_error.css");
 @import url("./components/Auth/css/__form/auth__form.css");
 @import url("./components/Auth/css/__header/auth__header.css");
 @import url("./components/Auth/css/__links/auth__links.css");
 @import url("./components/Auth/css/__link/auth__link.css");
 @import url("./components/Auth/css/__question/auth__question.css");
+@import url("./components/Auth/css/__error/auth__error.css");
 @import url("./components/Error/css/error.css");
 @import url("./components/Error/css/__header/error__header.css");
 @import url("./components/Error/css/__link/error__link.css");

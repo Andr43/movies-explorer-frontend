@@ -1,0 +1,12 @@
+.auth__field_name_error {
+  display: block;
+  margin: 0;
+  margin-bottom: 24px;
+  padding: 0;
+  color: #ff4062;
+  font-size: 10px;
+}
+
+.auth__field_name_error:last-child{
+  margin-bottom: 0;
+}

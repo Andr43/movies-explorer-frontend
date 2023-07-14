@@ -6,27 +6,35 @@ function Login(props) {
     email: "",
     password: "",
   });
+  const [errors, setErrors] = useState({});
+  const [isValidated, setIsValidated] = useState(false);
   const formLogin = document.querySelector(".auth__form");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+    const buttonSubmit = document.querySelector('.auth__button');
     setFormValue({
       ...formValue,
       [name]: value,
     });
+    setErrors({...errors, [name]: e.target.validationMessage });
+    const isValidated = e.target.closest("form").checkValidity();
+    setIsValidated(isValidated);
+    if(isValidated){
+      buttonSubmit.classList.remove('auth__button_inactive');
+    } else {
+      buttonSubmit.classList.add('auth__button_inactive');
+    }
   };
 
-  // const validationCheck = () => {
-  //   const buttonSubmit = document.querySelector('auth__button');
-  //   if(!props.loggedIn && formValue === ""){
-  //     buttonSubmit.classList.add('auth__button_inactive')
-  //   }
-  // }
 
   const formSubmit = (e) => {
     e.preventDefault();
-    props.onLoginSubmit(formValue.email, formValue.password, formLogin);
-    // validationCheck();
+    if(isValidated){
+      props.onLoginSubmit(formValue.email, formValue.password, formLogin);
+    } else {
+      return
+    }
   };
 
   return (
@@ -36,9 +44,12 @@ function Login(props) {
         <h1 className="auth__header">Рады видеть!</h1>
         <form className="auth__form" action="#" onSubmit={formSubmit} noValidate>
           <span className="auth__field_name">E-mail</span>
-          <input className="auth__field" name="email" onChange={handleChange} value={formValue.email} type="email" />
+          <input className="auth__field" name="email" onChange={handleChange} value={formValue.email} type="email" required />
+          <span className="auth__field_name_error">{errors.email}</span>
           <span className="auth__field_name">Пароль</span>
-          <input className="auth__field" name="password" onChange={handleChange} value={formValue.password} type="password" />
+          <input className="auth__field" name="password" onChange={handleChange} value={formValue.password} type="password" minLength={2} maxLength={30} required />
+          <span className="auth__field_name_error">{errors.password}</span>
+          {props.fetchError && <span className="auth__error">{props.fetchError.toString()}</span>}
           <button className="auth__button auth__button_login" type="submit">
             Войти
           </button>

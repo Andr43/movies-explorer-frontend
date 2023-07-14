@@ -4,7 +4,9 @@ const checkStatus = (res) => {
   if (res.ok) {
     return res.json();
   } else {
-    return Promise.reject(console.error(`Ошибка: ${res.status}.`));
+    return res.json().then(errorData => {
+      throw new Error(`Ошибка ${errorData.status}. ${errorData.message}`);
+    });
   }
 };
 
@@ -40,7 +42,9 @@ export const login = (email, password) => {
     if (res.ok) {
       return res;
     } else {
-      return Promise.reject(console.error(`Ошибка: ${res.status}.`));
+      return res.json().then(errorData => {
+        throw new Error(`Ошибка ${errorData.status}. ${errorData.message}`);
+      });
     }
   });
 };
