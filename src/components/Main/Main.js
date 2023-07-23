@@ -6,10 +6,10 @@ import AboutMe from "./AboutMe/AboutMe.js";
 import Portfolio from "./Portfolio/Portfolio.js";
 import Footer from "../Footer/Footer.js";
 
-function Main() {
+function Main(props) {
   return (
     <>
-      <Promo />
+      <Promo loggedIn={props.loggedIn} />
       <NavTab />
       <AboutProject />
       <Techs />

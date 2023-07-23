@@ -160,7 +160,7 @@ const handleResize = () => {
         .then((res) => {
           setLoggedIn(false); 
           localStorage.removeItem("authorized"); 
-          navigate("/signin"); 
+          navigate("/"); 
         })
         .catch((err) => {
           console.error(err)
@@ -171,7 +171,7 @@ const handleResize = () => {
         }
       };
 
-      function handleUpdateUser({ name, email }) {
+      function handleUpdateUser(name, email) {
         UserApi
           .updateUserInfo(name, email)
           .then((res) => {
@@ -181,16 +181,16 @@ const handleResize = () => {
               email: email,
             });
           })
-    
           .catch((err) => {
-            console.error(err)
+            console.error(err);
+            setFetchError(err);
             return;
           });
       };
   return (
     <>
       <Routes>
-        <Route path="/" element={<Main />} />
+        <Route path="/" element={<Main loggedIn={loggedIn} />} />
         <Route
           path="/movies"
           element={<ProtectedRoute
@@ -208,7 +208,7 @@ const handleResize = () => {
         <Route path="/users/me" element={
         <ProtectedRoute
         loggedIn={loggedIn}
-        element={<Profile currentUser={currentUser} handleUpdateUser={handleUpdateUser} onSignOut={onSignOut} />} />} />
+        element={<Profile fetchError={fetchError} currentUser={currentUser} handleUpdateUser={handleUpdateUser} onSignOut={onSignOut} />} />} />
         <Route path="/signin" element={<Login fetchError={fetchError} loggedIn={loggedIn} onLoginSubmit={onLoginSubmit} />} />
         <Route path="/signup" element={<Register fetchError={fetchError} registeredIn={registeredIn} onRegisterSubmit={onRegisterSubmit} />} />
         <Route path="/signout" element={<Login />} />

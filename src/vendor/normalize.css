@@ -166,6 +166,7 @@ textarea {
   font-size: 100%; /* 1 */
   line-height: 1.15; /* 1 */
   margin: 0; /* 2 */
+  outline: none;
 }
 
 /**
@@ -346,4 +347,16 @@ template {
 
 [hidden] {
   display: none;
+}
+
+input:focus{
+  outline: none;
+  }
+
+  input:-webkit-autofill {
+    color: #ffffff !important;
+}
+
+a:focus{
+  outline: none;
 }

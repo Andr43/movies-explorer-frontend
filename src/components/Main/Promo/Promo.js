@@ -1,19 +1,10 @@
-import { Link } from "react-router-dom";
+import Header from "../../Header/Header.js";
+import HeaderPromo from "../../Header/HeaderPromo.js";
 
-function Promo() {
+function Promo(props) {
   return (
     <section className="promo">
-      <header className="promo__header">
-        <Link className="promo__logo header__logo" to="/"></Link>
-        <nav className="promo__links">
-          <Link className="promo__link" to="/signup">
-            Регистрация
-          </Link>
-          <Link className="promo__link promo__link_signin" to="/signin">
-            Войти
-          </Link>
-        </nav>
-      </header>
+      {props.loggedIn ? <Header /> : <HeaderPromo />}
       <div className="promo__main">
         <h1 className="promo__par">
           Учебный проект студента факультета Веб-разработки.

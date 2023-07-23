@@ -78,6 +78,7 @@
 @import url("./components/Profile/css/profile.css");
 @import url("./components/Profile/css/__button/_log-out/profile__button_log-out.css");
 @import url("./components/Profile/css/__button/_submit/profile__button_submit.css");
+@import url("./components/Profile/css/__button/_submit/_inactive/profile__button_submit_inactive.css");
 @import url("./components/Profile/css/__edit/profile__edit.css");
 @import url("./components/Profile/css/__field/profile__field.css");
 @import url("./components/Profile/css/__name/profile__name.css");
