@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   border: 0;
-  background-color: #afafaf;
+  background-color: #2be080;
   border-radius: 20px;
   width: 34px;
   height: 14px;
@@ -17,7 +17,7 @@
   border-radius: 50%;
   background-color: #fff;
   position: relative;
-  left: -10px;
+  left: 10px;
   bottom: 2.7px;
   transition-duration: 300ms;
 }

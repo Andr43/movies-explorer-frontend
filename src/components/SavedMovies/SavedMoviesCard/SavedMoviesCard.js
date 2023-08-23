@@ -1,19 +1,27 @@
-import moviesCardImage from "../../../images/movies-card__image.jpg";
-
 function SavedMoviesCard(props) {
+
+function deleteMovie(){
+  props.handleRemoveSavedMovie(props.movie.id);
+}
 
   return (
     <>
-    <li className="movies-card">
-      <h3 className="movies-card__name">33 слова о дизайне</h3>
-      <p className="movies-card__duration">1ч 47м</p>
-      <img
-      src={moviesCardImage}
-        className="movies-card__image"
-        alt="Обложка фильма"
-      ></img>
-      <button className="movies-card__button movies-card__button_delete"></button>
-    </li>
+      <li className="movies-card">
+        <h3 className="movies-card__name">{props.movie.nameRU}</h3>
+        <p className="movies-card__duration">{`${props.movie.duration}м`}</p>
+        <a
+          className="movies-card__link"
+          href={props.movie.trailerLink}
+          target="_blank"
+        >
+          <img
+            src={`https://api.nomoreparties.co${props.movie.image.url}`}
+            className="movies-card__image"
+            alt="Обложка фильма"
+          ></img>
+        </a>
+        <button onClick={deleteMovie} className="movies-card__button movies-card__button_delete"></button>
+      </li>
     </>
   );
 }

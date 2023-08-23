@@ -1,0 +1,13 @@
+.search-form__par {
+  margin: 0;
+  margin-left: 15px;
+  padding: 0;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+@media screen and (max-width: 450px) {
+  .search-form__par {
+    font-size: 11px;
+  }
+}

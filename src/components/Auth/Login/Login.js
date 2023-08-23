@@ -1,5 +1,6 @@
 import { React, useState } from "react";
 import { Link } from "react-router-dom";
+import ResultPopup from "../../ResultPopup/ResultPopup.js";
 
 function Login(props) {
   const [formValue, setFormValue] = useState({
@@ -59,6 +60,7 @@ function Login(props) {
               Регистрация
             </Link>
           </div>
+          {props.loggedIn && <ResultPopup />}
         </form>
       </section>
     </>

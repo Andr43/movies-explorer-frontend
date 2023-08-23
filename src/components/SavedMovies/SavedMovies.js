@@ -7,8 +7,10 @@ function SavedMovies(props) {
   return (
     <>
       <Header />
-      <SearchForm filmsSearch={props.filmsSearch} />
-      <MoviesCardList movies={props.movies} />
+      <SearchForm
+      handleShowShortMovies={props.handleShowShortMovies}
+      filmsSearchSaved={props.filmsSearchSaved} />
+      <MoviesCardList movies={props.savedMovies} handleRemoveSavedMovie={props.handleRemoveSavedMovie} />
       <Footer />
     </>
   );

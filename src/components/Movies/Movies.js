@@ -7,8 +7,22 @@ function Movies(props) {
   return (
     <>
       <Header />
-      <SearchForm searchResult={props.searchResult} filmsSearch={props.filmsSearch} />
-      <MoviesCardList isSearchFormEmpty={props.isSearchFormEmpty} loading={props.loading} showMoreFilms={props.showMoreFilms} visibleItems={props.visibleItems} movies={props.movies} />
+      <SearchForm
+        handleShowShortMovies={props.handleShowShortMovies}
+        filmsSearch={props.filmsSearch}
+        filmsSearchSaved={props.filmsSearchSaved}
+      />
+      <MoviesCardList
+        isSearchFormEmpty={props.isSearchFormEmpty}
+        loading={props.loading}
+        showMoreFilms={props.showMoreFilms}
+        visibleItems={props.visibleItems}
+        movies={props.movies}
+        savedMovies={props.savedMovies}
+        handleSaveMovies={props.handleSaveMovies}
+        handleRemoveSavedMovie={props.handleRemoveSavedMovie}
+        isSaved={props.isSaved}
+      />
       <Footer />
     </>
   );
